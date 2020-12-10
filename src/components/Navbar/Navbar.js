@@ -1,9 +1,10 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 
-import { initialDecks } from "../../mockdata/CardData";
+import  { AppContext } from "../../context/AppContext"
 
 const Navbar = () => {
-    const decks = initialDecks;
+    const { decks } = useContext(AppContext);
 
     return (
         <div className="navbar">
